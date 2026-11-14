@@ -1,0 +1,45 @@
+# CUSTOMER RETENTION & COHORT ANALYSIS — FINDINGS REPORT
+
+**Project:** E-Commerce Business Intelligence & Sales Analytics  
+**Dataset:** Olist Brazilian E-Commerce Dataset  
+**Tools:** SQL Server, Python, pandas, Matplotlib
+
+## 1. Objective
+
+Analyze customer repeat purchasing and monthly retention to understand how many first-time buyers return and how purchasing behavior changes over time.
+
+## 2. Key Performance Indicators
+
+| KPI | Result |
+|---|---:|
+| Total Unique Customers | 93,358 |
+| Repeat Customers | 2,801 |
+| Repeat Purchase Rate | 3.00% |
+| Acquisition Cohorts | 23 |
+| Monthly Cohort Activity Records | 219 |
+| Average Orders per Customer | 1.03 |
+
+**Method:** Customers were identified using `customer_unique_id`, and only delivered orders were included. Each customer's first delivered-order purchase month defines their acquisition cohort.
+
+## 3. Key Findings
+
+- **Low Repeat Purchasing:** Only 3.00% of customers placed more than one delivered order, indicating an opportunity to improve customer retention.
+- **Monthly Retention:** The cohort heatmap shows generally low returning-customer activity after the initial purchase month.
+- **Small Cohorts:** The December 2016 cohort contains only one customer, resulting in 100% Month-1 retention. This is not representative of overall customer behavior.
+- **Observation Period:** Recent cohorts have fewer observable months. Future months must not be treated as 0% retention.
+
+## 4. Business Recommendations
+
+1. **Encourage Second Purchases:** Test follow-up offers and personalized recommendations for first-time buyers.
+2. **Analyze Customer Segments:** Compare repeat purchasing across acquisition months and customer states to identify stronger customer groups.
+3. **Monitor Monthly Retention:** Track Month-1 and Month-2 retention separately from overall repeat purchase rate and evaluate retention initiatives over time.
+
+## 5. Limitations
+
+The analysis uses historical Olist data rather than live transactions. Only delivered orders are eligible. Small cohorts may produce unstable percentages, and newer cohorts have shorter observation windows. The relationship between customer behavior and business outcomes does not establish causation.
+
+The observation period covers delivered-order purchases from September 15, 2016, through August 29, 2018. August 2018 is a partial month, and recent cohorts have limited follow-up periods. Months beyond the observation window are excluded rather than counted as zero retention.
+
+## 6. Conclusion
+
+The analysis identifies low repeat purchasing as an important business opportunity. Monthly cohort tracking provides a structured way to measure returning-customer activity and evaluate future retention strategies.

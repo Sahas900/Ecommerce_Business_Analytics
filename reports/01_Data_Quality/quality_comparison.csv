@@ -1,0 +1,10 @@
+dataset,rows_before,rows_after,duplicates_before,missing_before,missing_after
+customers,99441,99441,0,0,0
+orders,99441,99441,0,4908,4908
+items,112650,112650,0,0,0
+payments,103886,103886,0,0,0
+reviews,99224,99224,0,145903,145903
+products,32951,32951,0,2448,2448
+sellers,3095,3095,0,0,0
+geolocation,1000163,738332,261831,0,0
+categories,71,71,0,0,0

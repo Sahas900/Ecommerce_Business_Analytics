@@ -1,0 +1,11 @@
+E-COMMERCE DAILY MIS REPORT — REFRESH INSTRUCTIONS
+
+1. Open 03_daily_mis.xlsx in Microsoft Excel Desktop.
+2. Ensure the cleaned CSV source files remain in their original project folder.
+3. Go to Data > Refresh All.
+4. Wait for all Power Query connections and PivotTables to finish refreshing.
+5. Verify the MIS_Dashboard KPI values, three charts, and Daily_MIS_Report.
+6. Check that the daily target formulas and performance alerts remain intact.
+7. Save the workbook using Ctrl + S.
+
+Revenue excludes freight charges. Orders are counted using distinct order IDs. The R$20,000 daily sales target is illustrative, not an actual historical company target.

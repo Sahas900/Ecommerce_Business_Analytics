@@ -1,0 +1,33 @@
+
+POWER BI EXECUTIVE DASHBOARD
+
+Ecommerce Business Analytics Project
+
+KEY METRICS
+Total Sales Revenue: R$13,221,498.11
+Total Delivered Orders: 96,478
+Average Order Value: R$137.04
+Total Customers: 93,358
+On-Time Delivery Rate: 91.89%
+
+KEY BUSINESS INSIGHTS
+1. Health & Beauty is the highest-revenue product category.
+2. Sao Paulo (SP) generates the highest customer-state revenue.
+3. November 2017 was the strongest sales month.
+4. Approximately 91.89% of valid delivered orders arrived on time.
+5. The dashboard includes the top 10 sellers by revenue.
+
+DASHBOARD FEATURES
+- Five KPI cards
+- Monthly sales revenue trend
+- Top 10 product categories
+- Top 10 sellers
+- Top 10 customer states
+- Interactive purchase date slicer
+
+VALIDATION
+Power BI revenue, delivered orders, customers,
+and delivery counts were verified against SQL.
+
+Revenue includes delivered orders only and
+excludes freight charges.

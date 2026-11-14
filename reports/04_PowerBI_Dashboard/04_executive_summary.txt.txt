@@ -1,0 +1,73 @@
+# E-COMMERCE BUSINESS INTELLIGENCE — EXECUTIVE SUMMARY
+
+**Project:** End-to-End E-Commerce Business Intelligence & Analytics  
+**Dataset:** Olist Brazilian E-Commerce Dataset  
+**Tools:** Power BI, Power Query, DAX, SQL Server
+
+## 1. Project Objective
+
+Develop an interactive Power BI dashboard to analyze e-commerce sales performance, customer purchasing patterns, product categories, seller performance, and delivery efficiency.
+
+## 2. Key Performance Indicators
+
+| KPI | Result |
+|---|---|
+| Total Sales Revenue | R$13,221,498.11 |
+| Delivered Orders | 96,478 |
+| Average Order Value | R$137.04 |
+| Unique Customers | 93,358 |
+| On-Time Delivery Rate | 91.89% |
+
+Revenue includes delivered orders only, based on product prices, excluding freight charges. Canceled and undelivered orders are excluded from delivered-order sales revenue.
+
+
+## Order Status Definitions
+
+- **Booked Orders:** All orders recorded in the system, regardless of their final delivery status. These represent order volume, not necessarily completed sales.
+
+- **Delivered Orders:** Orders where `order_status = 'delivered'`. Only delivered orders are included in our sales revenue and Average Order Value (AOV) calculations.
+
+- **Canceled Orders:** Orders where `order_status = 'canceled'`. These orders are excluded from delivered sales revenue and AOV calculations.
+
+**Important:** Revenue is calculated using `SUM(items_cleaned[price])` for delivered orders only, excluding freight charges. Booked, delivered, and canceled orders are not mixed when calculating KPIs.
+
+
+## 3. Key Business Findings
+
+- **Sales Performance:** November 2017 recorded the highest monthly sales revenue of R$987,765.37.
+- **Product Performance:** Health & Beauty generated the highest category revenue, approximately R$1.23 million.
+- **Regional Performance:** São Paulo (SP) generated the highest customer-state revenue.
+- **Delivery Performance:** 88,644 of 96,470 delivered orders with valid delivery dates arrived on time.
+
+## 4. Data Model
+
+The Power BI model connects orders, order items, customers, products, sellers, payments, reviews, product categories, and a dedicated Date table.
+
+- **Fact tables:** Order Items (order-item-level sales), Orders (order-level transactions), Payments and Reviews (order-related records).
+- **Dimension tables:** Customers, Products, Sellers, Product Categories, and Date Table.
+- **Relationship logic:** One-to-many relationships are used where appropriate. The customer-to-orders relationship uses the dataset's order-specific customer ID.
+- **Geolocation:** Kept disconnected to avoid ambiguous relationships caused by repeated ZIP-code prefixes.
+
+The model supports interactive filtering and time-based analysis.
+
+## 5. Business Recommendations
+
+1. **Prioritize high-performing categories:** Maintain product availability and evaluate targeted promotions for Health & Beauty products.
+2. **Improve delivery reliability:** Investigate late-delivery patterns among the 7,826 orders delivered after their estimated dates.
+3. **Optimize regional sales strategies:** Analyze customer demand in São Paulo and identify opportunities to expand sales in other states.
+
+## 6. Dashboard Features and Validation
+
+The report contains three pages:
+
+- **Page 1:** Executive KPIs and monthly revenue trend.
+- **Page 2:** Product category, seller, and regional revenue analysis.
+- **Page 3:** Product category drillthrough with detailed revenue trends.
+
+The report also includes purchase-date slicers and month-over-month revenue measures.
+
+Five key Power BI metrics were validated against SQL results.
+
+## 7. Conclusion
+
+The dashboard provides a consolidated view of sales, customers, products, and delivery performance. It helps business stakeholders monitor key metrics, investigate category performance, and identify operational improvement opportunities.
